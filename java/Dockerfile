@@ -19,11 +19,8 @@ RUN cd /tmp/ijava-1.2.0 && python3 ./install.py --sys-prefix
 RUN rm -r /tmp/ijava-1.2.0
 
 # Set up the user
-RUN useradd -ms /bin/bash jovyan
-USER jovyan
+RUN useradd -ms /bin/bash ujava
+USER ujava
 
 # Set working directory in container
-WORKDIR /home/jovyan/work
-
-# Launch the jupyter notebook
-ENTRYPOINT [ "jupyter", "notebook", "--ip=0.0.0.0" ]
+WORKDIR /home/ujava/work

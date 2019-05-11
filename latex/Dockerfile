@@ -5,9 +5,9 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y \
     texlive-full
 
-RUN useradd -ms /bin/bash latexian
-USER latexian
+RUN useradd -ms /bin/bash ulatex
+USER ulatex
 
-WORKDIR /home/latexian/work
+WORKDIR /home/ulatex/work
 
 ENTRYPOINT [ "pdflatex" ]

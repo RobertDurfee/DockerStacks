@@ -8,9 +8,7 @@ RUN pip3 install \
     jupyter \
     sympy
 
-RUN useradd -ms /bin/bash jovyan
-USER jovyan
+RUN useradd -ms /bin/bash usympy
+USER usympy
 
-WORKDIR /home/jovyan/work
-
-ENTRYPOINT [ "jupyter", "notebook", "--ip=0.0.0.0" ]
+WORKDIR /home/usympy/work
